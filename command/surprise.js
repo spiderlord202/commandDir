@@ -15,7 +15,7 @@ module.exports = {
           
                  Main = new Discord.MessageEmbed()
                 .setAuthor("Surprise", message.author.displayAvatarURL())
-                .setDescription("[click me for suprise](https://www.youtube.com/watch?v=XM6 iTiaaw0)")
+                .setDescription("[click me for suprise](https://www.youtube.com/watch?v=XM6iTiaaw0)")
                 .setColor("#ff8c00")
                 .setThumbnail(`${message.author.displayAvatarURL()}`)
                 .setFooter("Good Luck and Have Fun")
