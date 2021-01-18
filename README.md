@@ -1,2 +1,2 @@
 # commandDir
-just a repo
+just a repository
