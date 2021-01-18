@@ -6,20 +6,20 @@ module.exports = {
     description: "fun commands",
     execute: async (bot, message, args, split) => {       
             let Random = Math.floor((Math.random() * 90) + 1);
-            console.log(Random)
             let Main = ""
-            if (!Random == 1){
-            Main = new Discord.MessageEmbed()
+            if (Random === 1){
+                Main = new Discord.MessageEmbed()
+               .setAuthor("You found a easter egg", message.author.displayAvatarURL)
+               .setDescription("[click me](https://www.youtube.com/watch?v=cWBPjTQvNY8)");
+            } else {
+          
+                 Main = new Discord.MessageEmbed()
                 .setAuthor("Surprise", message.author.displayAvatarURL())
                 .setDescription("[click me for suprise](https://www.youtube.com/watch?v=XM6 iTiaaw0)")
                 .setColor("#ff8c00")
                 .setThumbnail(`${message.author.displayAvatarURL()}`)
                 .setFooter("Good Luck and Have Fun")
                 .setTimestamp();
-            } else {
-              Main = new Discord.MessageEmbed()
-               .setAuthor("You found a easter egg", message.author.displayAvatarURL)
-               .setDescription("[click me](https://www.youtube.com/watch?v=cWBPjTQvNY8)")
             }
          await message.channel.send("say yes or no");
              const filter = m => m.author.id == message.author.id;
