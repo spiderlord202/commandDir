@@ -6,6 +6,7 @@ module.exports = {
     description: "fun commands",
     execute: async (bot, message, args, split) => {       
             let Random = Math.floor((Math.random() * 90) + 1);
+            console.log(Random)
             let Main = ""
             if (!Random == 1){
             Main = new Discord.MessageEmbed()
