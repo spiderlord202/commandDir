@@ -5,6 +5,7 @@ module.exports = {
   description: "help",
   execute: async (bot, message, args, split) => {
     setTimeout(function(){
+      async function RunCycle(){
     for (i = 0; i < bot.AvalibleCommands.length; i++) {
      //bot.commands.get(bot.AvalibleCommands[i])
      async function Await(){
@@ -12,6 +13,8 @@ module.exports = {
      }
      Await()
   }
+        RunCycle().then(() => {message.channel.send("thats all")})
+      }
     }, 500)
 }
 }
