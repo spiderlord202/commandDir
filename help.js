@@ -29,6 +29,7 @@ module.exports = {
           let Split = []
           Split[0] = `|${split[3]}`
           bot.CommandStorage(Split)
+          message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${Split.slice(1)}`)
         })
       }
     }
