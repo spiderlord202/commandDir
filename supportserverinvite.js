@@ -1,7 +1,7 @@
 const url = "https://discord.gg/jPWezxQ";
 const Discord = require("discord.js");
 module.exports = {
-  name: "supportinvite",
+  name: "supportserverinvite",
   description: "sends the player a invite to our main server",
   execute: async (bot, message, args, split) => {
       message.author.send(url);
