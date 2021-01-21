@@ -1,10 +1,11 @@
 const Discord = require("discord.js")
-
+const got = require("got")
 module.exports = {
   name: "help",
   description: "help",
   execute: async (bot, message, args, split) => {
-    message.channel.send("the commands are:")
+    if (split[0] && split[1]){
+    message.channel.send('say "$help focus <command>" to get info on a command. \n the commands are:')
     setTimeout(function(){
       async function RunCycle(){
     for (i = 0; i < bot.AvalibleCommands.length; i++) {
@@ -17,5 +18,19 @@ module.exports = {
       }
       RunCycle().then(() => {message.channel.send("thats all!")})
     }, 500)
+    } else {
+      if (bot.AvalibleCommands.includes(split[3].slice(1))){
+      const Uri = `spiderlord202/commandDir/${split[3]}.js`
+      const Options = {}
+      const url = bot.GetURL(Uri, Options);
+        got(url)
+    .then(response => {
+          let res = JSON.parse(response.body)
+          let Split = []
+          Split[0] = `|${split[3]}`
+          bot.CommandStorage(Split)
+        })
+      }
+    }
 }
 }
