@@ -15,7 +15,7 @@ module.exports = {
      Await()
   }
       }
-      RunCycle().then(() => {message.channel.send("thats all")})
+      RunCycle().then(() => {message.channel.send("thats all!")})
     }, 500)
 }
 }
