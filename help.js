@@ -4,6 +4,7 @@ module.exports = {
   name: "help",
   description: "help",
   execute: async (bot, message, args, split) => {
+    message.channel.send("the commands are:")
     setTimeout(function(){
       async function RunCycle(){
     for (i = 0; i < bot.AvalibleCommands.length; i++) {
