@@ -21,7 +21,7 @@ module.exports = {
     }, 500)
     } else if (split[1] == "focus" && split[2]){
       if (bot.AvalibleCommands.includes(split[2])){
-       if (!Bot.commands.has(Split[2])) {
+       if (!bot.commands.has(Split[2])) {
          console.log("c")
       const Uri = `spiderlord202/commandDir/${split[2]}.js`
       const Options = {}
