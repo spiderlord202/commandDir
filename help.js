@@ -21,6 +21,7 @@ module.exports = {
     }, 500)
     } else if (split[1] == "focus" && split[2]){
       if (bot.AvalibleCommands.includes(split[2])){
+        if (!Bot.commands.has(Split[2])) {
       const Uri = `spiderlord202/commandDir/${split[2]}.js`
       const Options = {}
       const url = bot.GetURL(Uri, Options);
@@ -30,20 +31,21 @@ module.exports = {
           let Split = []
           Split[0] = `|${split[2]}`
           bot.CommandStorage(Split)
-          console.log(res)
-        //     if (res.includes("module.exports") && Name.endsWith("js") && true){
-        //const Parse = res.replace("module.exports", 'const fileData')
-        //const finishedResult = `${Parse} \n Bot.commands.set(fileData.name, fileData)`
-        //console.log(finishedResult)
-        //async function Exec(){
-        //eval(finishedResult)
-        //}
-        //Exec().then(() => {
-     
-        //})
-     // }
-          message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${split[2].slice(1)}`)
+           if (res.includes("module.exports") && Name.endsWith("js") && true){
+        const Parse = res.content.replace("module.exports", 'const fileData')
+        const finishedResult = `${Parse} \n Bot.commands.set(${res.name}, fileData)`
+        console.log(finishedResult)
+        async function Exec(){
+        eval(finishedResult)
+        }
+        Exec().then(() => {
+           message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${res.name.slice(0, -3)}`)
         })
+        }
+        })
+      } else {
+        
+      }
       }
     }
 }
