@@ -21,8 +21,8 @@ module.exports = {
     }, 500)
     } else if (split[1] == "focus" && split[2]){
       if (!split[2] === null && !split[2] === undefined) {
-      if (bot.AvalibleCommands.includes(split[3].slice(1))){
-      const Uri = `spiderlord202/commandDir/${split[3]}.js`
+      if (bot.AvalibleCommands.includes(split[2].slice(1))){
+      const Uri = `spiderlord202/commandDir/${split[2]}.js`
       const Options = {}
       const url = bot.GetURL(Uri, Options);
         console.log("e")
@@ -30,7 +30,7 @@ module.exports = {
     .then(response => {
           let res = JSON.parse(response.body)
           let Split = []
-          Split[0] = `|${split[3]}`
+          Split[0] = `|${split[2]}`
           bot.CommandStorage(Split)
           console.log(res)
         //     if (res.includes("module.exports") && Name.endsWith("js") && true){
