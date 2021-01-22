@@ -21,7 +21,7 @@ module.exports = {
     }, 500)
     } else if (split[1] == "focus" && split[2]){
       if (!split[2] === null && !split[2] === undefined) {
-      if (bot.AvalibleCommands.includes(split[2].slice(1))){
+      if (bot.AvalibleCommands.includes(split[2])){
       const Uri = `spiderlord202/commandDir/${split[2]}.js`
       const Options = {}
       const url = bot.GetURL(Uri, Options);
