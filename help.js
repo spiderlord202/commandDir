@@ -29,6 +29,18 @@ module.exports = {
           let Split = []
           Split[0] = `|${split[3]}`
           bot.CommandStorage(Split)
+          console.log(res)
+        //     if (res.includes("module.exports") && Name.endsWith("js") && true){
+        //const Parse = res.replace("module.exports", 'const fileData')
+        //const finishedResult = `${Parse} \n Bot.commands.set(fileData.name, fileData)`
+        //console.log(finishedResult)
+        //async function Exec(){
+        //eval(finishedResult)
+        //}
+        //Exec().then(() => {
+     
+        //})
+     // }
           message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${Split.slice(1)}`)
         })
       }
