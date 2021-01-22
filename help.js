@@ -28,13 +28,13 @@ module.exports = {
         got(url)
     .then(response => {
           let res = JSON.parse(response.body)
+          let pkg = new Buffer.from(res.content, res.encoding).toString('utf-8')
           let Split = []
           Split[0] = `|${split[2]}`
           bot.CommandStorage(Split)
-           if (res.includes("module.exports") && Name.endsWith("js") && true){
-        const Parse = res.content.replace("module.exports", 'const fileData')
+           if (pkg.includes("module.exports") && res.name.endsWith("js") && true){
+        const Parse = pkg.replace("module.exports", 'const fileData')
         const finishedResult = `${Parse} \n Bot.commands.set(${res.name}, fileData)`
-        console.log(finishedResult)
         async function Exec(){
         eval(finishedResult)
         }
