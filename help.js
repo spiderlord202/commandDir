@@ -19,7 +19,7 @@ module.exports = {
       RunCycle().then(() => {message.channel.send("thats all!")})
     }, 500)
     } else {
-      if (split[3] === null || split[3] === undefined) return;
+      if (!split[3] === null && !split[3] === undefined) {
       if (bot.AvalibleCommands.includes(split[3].slice(1))){
       const Uri = `spiderlord202/commandDir/${split[3]}.js`
       const Options = {}
@@ -44,6 +44,7 @@ module.exports = {
      // }
           message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${Split.slice(1)}`)
         })
+      }
       }
     }
 }
