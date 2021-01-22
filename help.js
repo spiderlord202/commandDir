@@ -42,7 +42,7 @@ module.exports = {
      
         //})
      // }
-          message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${Split[2].slice(1)}`)
+          message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${split[2].slice(1)}`)
         })
       }
     }
