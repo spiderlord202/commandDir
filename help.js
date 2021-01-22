@@ -21,7 +21,7 @@ module.exports = {
     }, 500)
     } else if (split[1] == "focus" && split[2]){
       if (bot.AvalibleCommands.includes(split[2])){
-        if (!Bot.commands.has(Split[2])) {
+       if (!Bot.commands.has(Split[2])) {
       const Uri = `spiderlord202/commandDir/${split[2]}.js`
       const Options = {}
       const url = bot.GetURL(Uri, Options);
@@ -44,7 +44,7 @@ module.exports = {
         }
         })
       } else {
-        
+        message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${bot.commands.get(Split[0].slice(1)).FileName}`)
       }
       }
     }
