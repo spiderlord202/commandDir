@@ -18,7 +18,7 @@ module.exports = {
       }
       RunCycle().then(() => {message.channel.send("thats all!")})
     }, 500)
-    } else {
+    } else if (split[2] == "focus" && split[3]){
       if (!split[3] === null && !split[3] === undefined) {
       if (bot.AvalibleCommands.includes(split[3].slice(1))){
       const Uri = `spiderlord202/commandDir/${split[3]}.js`
