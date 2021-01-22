@@ -25,7 +25,7 @@ module.exports = {
       const Uri = `spiderlord202/commandDir/${split[3]}.js`
       const Options = {}
       const url = bot.GetURL(Uri, Options);
-        
+        console.log("e")
         got(url)
     .then(response => {
           let res = JSON.parse(response.body)
