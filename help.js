@@ -5,7 +5,7 @@ module.exports = {
   execute: async (bot, message, args, split) => {
     let got = require("got")
     let Discord = require("discord.js")
-    if (!split[2]){
+    if (!split[1]){
     message.channel.send('say "$help focus <command>" to get info on a command. \n the commands are:')
     setTimeout(function(){
       async function RunCycle(){
@@ -19,8 +19,8 @@ module.exports = {
       }
       RunCycle().then(() => {message.channel.send("thats all!")})
     }, 500)
-    } else if (split[2] == "focus" && split[3]){
-      if (!split[3] === null && !split[3] === undefined) {
+    } else if (split[1] == "focus" && split[2]){
+      if (!split[2] === null && !split[2] === undefined) {
       if (bot.AvalibleCommands.includes(split[3].slice(1))){
       const Uri = `spiderlord202/commandDir/${split[3]}.js`
       const Options = {}
