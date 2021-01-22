@@ -5,7 +5,8 @@ module.exports = {
   execute: async (bot, message, args, split) => {
     let got = require("got")
     let Discord = require("discord.js")
-    console.log("a")
+    console.log(split[1])
+    console.log(split[2])
     if (!split[1]){
     message.channel.send('say "$help focus <command>" to get info on a command. \n the commands are:')
     setTimeout(function(){
