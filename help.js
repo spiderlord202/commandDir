@@ -21,7 +21,6 @@ module.exports = {
       RunCycle().then(() => {message.channel.send("thats all!")})
     }, 500)
     } else if (split[1] == "focus" && split[2]){
-      if (!split[2] === null && !split[2] === undefined) {
       if (bot.AvalibleCommands.includes(split[2])){
       const Uri = `spiderlord202/commandDir/${split[2]}.js`
       const Options = {}
@@ -47,7 +46,6 @@ module.exports = {
      // }
           message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${Split.slice(1)}`)
         })
-      }
       }
     }
 }
