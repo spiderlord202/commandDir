@@ -5,8 +5,6 @@ module.exports = {
   execute: async (bot, message, args, split) => {
     let got = require("got")
     let Discord = require("discord.js")
-    console.log(split[1])
-    console.log(split[2])
     if (!split[1]){
     message.channel.send('say "$help focus <command>" to get info on a command. \n the commands are:')
     setTimeout(function(){
@@ -26,7 +24,6 @@ module.exports = {
       const Uri = `spiderlord202/commandDir/${split[2]}.js`
       const Options = {}
       const url = bot.GetURL(Uri, Options);
-        console.log("e")
         got(url)
     .then(response => {
           let res = JSON.parse(response.body)
@@ -45,7 +42,7 @@ module.exports = {
      
         //})
      // }
-          message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${Split.slice(1)}`)
+          message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${Split[2].slice(1)}`)
         })
       }
     }
