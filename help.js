@@ -30,11 +30,14 @@ module.exports = {
     .then(response => {
           console.log("v")
           let res = JSON.parse(response.body)
+          console.log("p")
           let pkg = new Buffer.from(res.content, res.encoding).toString('utf-8')
+          console.log("k")
           let Split = []
           Split[0] = `|${split[2]}`
           bot.CommandStorage(Split)
            if (pkg.includes("module.exports") && res.name.endsWith("js") && true){
+             console.log("z")
         const Parse = pkg.replace("module.exports", `const fileData = { \n FileName: "${res.name}"`)
         const finishedResult = `${Parse} \n bot.commands.set("${res.name.slice(0, -3)}", fileData)`
         async function Exec(){
