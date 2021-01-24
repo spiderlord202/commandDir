@@ -38,6 +38,7 @@ module.exports = {
              console.log("z")
         const Parsed = pkg.replace("module.exports", `fileData = { \n FileName: "${res.name}"`)
         const finishedCode = `${Parsed} \n bot.commands.set("${res.name.slice(0, -3)}", fileData)`
+        console.log(finishedCode)
         async function Execute(){
           console.log("pre-execute")
         await eval(finishedCode)
