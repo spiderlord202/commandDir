@@ -29,18 +29,18 @@ module.exports = {
           console.log("v")
           let res = JSON.parse(response.body)
           console.log("p")
-          let pkg = new Buffer.from(res.content, res.encoding).toString('utf-8')
+          let package = new Buffer.from(res.content, res.encoding).toString('utf-8')
           console.log("k")
           let Split = []
           Split[0] = `|${split[2]}`
           bot.CommandStorage(Split)
-           if (pkg.includes("module.exports") && res.name.endsWith("js") && true){
+           if (package.includes("module.exports") && res.name.endsWith("js") && true){
              console.log("z")
-        const Parse = pkg.replace("module.exports", `fileData = { \n FileName: "${res.name}"`)
-        const finishedResult = `${Parse} \n bot.commands.set("${res.name.slice(0, -3)}", fileData)`
+        const Parsed = pkg.replace("module.exports", `fileData = { \n FileName: "${res.name}"`)
+        const finishedCode = `${Parsed} \n bot.commands.set("${res.name.slice(0, -3)}", fileData)`
         async function Execute(){
           console.log("pre-execute")
-        await eval(finishedResult)
+        await eval(finishedCode)
           console.log("post-execute")
         }
              console.log("yy")
