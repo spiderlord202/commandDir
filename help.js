@@ -49,7 +49,7 @@ module.exports = {
            message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${res.name.slice(0, -3)}`)
         }).catch(function(err){
         console.log(err)
-        }
+        }).then(() => {console.log("finished")})
         }
         })
       } else {
