@@ -9,7 +9,7 @@ module.exports = {
     message.channel.send('say "$help focus <command>" to get info on a command. \n the commands are:')
     setTimeout(function(){
       async function RunCycle(){
-    for (const i = 0; i < bot.AvalibleCommands.length; i++) {
+    for (let i = 0; i < bot.AvalibleCommands.length; i++) {
      //bot.commands.get(bot.AvalibleCommands[i])
      async function Await(){
       await message.channel.send(bot.AvalibleCommands[i])
