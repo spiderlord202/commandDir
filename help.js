@@ -40,6 +40,7 @@ module.exports = {
              console.log("z")
         const Parse = pkg.replace("module.exports", `const fileData = { \n FileName: "${res.name}"`)
         const finishedResult = `${Parse} \n bot.commands.set("${res.name.slice(0, -3)}", fileData)`
+          console.log("y")
         async function Exec(){
         eval(finishedResult)
         }
