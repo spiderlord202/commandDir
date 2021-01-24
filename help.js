@@ -43,6 +43,7 @@ module.exports = {
         async function Exec(){
         eval(finishedResult)
         }
+             console.log("yy")
         Exec().then(() => {
               console.log("y")
            message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${res.name.slice(0, -3)}`)
