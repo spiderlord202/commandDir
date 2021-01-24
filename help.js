@@ -3,8 +3,6 @@ module.exports = {
   name: "help",
   description: "help",
   execute: async (bot, message, args, split) => {
-    const got = require("got")
-    const Discord = require("discord.js")
     if (!split[1]){
     message.channel.send('say "$help focus <command>" to get info on a command. \n the commands are:')
     setTimeout(function(){
@@ -40,13 +38,13 @@ module.exports = {
              console.log("z")
         const Parse = pkg.replace("module.exports", `fileData = { \n FileName: "${res.name}"`)
         const finishedResult = `${Parse} \n bot.commands.set("${res.name.slice(0, -3)}", fileData)`
-        async function Exec(){
+        async function Execute(){
           console.log("pre-execute")
         await eval(finishedResult)
           console.log("post-execute")
         }
              console.log("yy")
-        Exec().then(() => {
+        Execute().then(() => {
               console.log("y")
            message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${res.name.slice(0, -3)}`)
         }).catch(function(err){
