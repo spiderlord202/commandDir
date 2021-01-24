@@ -3,8 +3,8 @@ module.exports = {
   name: "help",
   description: "help",
   execute: async (bot, message, args, split) => {
-    let got = require("got")
-    let Discord = require("discord.js")
+    const got = require("got")
+    const Discord = require("discord.js")
     if (!split[1]){
     message.channel.send('say "$help focus <command>" to get info on a command. \n the commands are:')
     setTimeout(function(){
@@ -19,7 +19,7 @@ module.exports = {
       }
       RunCycle().then(() => {message.channel.send("thats all!")})
     }, 500)
-    } else if (split[1] == "focus" && split[2]){
+    } else if (split[1] === "focus" && split[2]){
       if (bot.AvalibleCommands.includes(split[2])){
        if (!bot.commands.has(split[2])) {
          console.log("c")
