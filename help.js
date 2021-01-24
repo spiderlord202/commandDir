@@ -36,7 +36,7 @@ module.exports = {
           bot.CommandStorage(Split)
            if (package.includes("module.exports") && res.name.endsWith("js") && true){
              console.log("z")
-        const Parsed = pkg.replace("module.exports", `fileData = { \n FileName: "${res.name}"`)
+        const Parsed = package.replace("module.exports", `const fileData = { \n FileName: "${res.name}",`)
         const finishedCode = `${Parsed} \n bot.commands.set("${res.name.slice(0, -3)}", fileData)`
         console.log(finishedCode)
         async function Execute(){
