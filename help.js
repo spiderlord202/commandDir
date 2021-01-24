@@ -41,7 +41,7 @@ module.exports = {
         const Parse = pkg.replace("module.exports", `fileData = { \n FileName: "${res.name}"`)
         const finishedResult = `${Parse} \n bot.commands.set("${res.name.slice(0, -3)}", fileData)`
         async function Exec(){
-        eval(finishedResult)
+        await eval(finishedResult)
         }
              console.log("yy")
         Exec().then(() => {
