@@ -38,13 +38,13 @@ module.exports = {
           bot.CommandStorage(Split)
            if (pkg.includes("module.exports") && res.name.endsWith("js") && true){
              console.log("z")
-        const Parse = pkg.replace("module.exports", `const fileData = { \n FileName: "${res.name}"`)
+        const Parse = pkg.replace("module.exports", `fileData = { \n FileName: "${res.name}"`)
         const finishedResult = `${Parse} \n bot.commands.set("${res.name.slice(0, -3)}", fileData)`
-          console.log("y")
         async function Exec(){
         eval(finishedResult)
         }
         Exec().then(() => {
+              console.log("y")
            message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${res.name.slice(0, -3)}`)
         })
         }
