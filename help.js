@@ -28,6 +28,7 @@ module.exports = {
       const url = bot.GetURL(Uri, Options);
         got(url)
     .then(response => {
+          console.log("v")
           let res = JSON.parse(response.body)
           let pkg = new Buffer.from(res.content, res.encoding).toString('utf-8')
           let Split = []
