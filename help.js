@@ -47,9 +47,9 @@ module.exports = {
         Exec().then(() => {
               console.log("y")
            message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${res.name.slice(0, -3)}`)
-        }).catch(err => {
+        }).catch(function(err){
         console.log(err)
-        }).then(e => {console.log("finsihed")})
+        }
         }
         })
       } else {
