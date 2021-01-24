@@ -9,7 +9,7 @@ module.exports = {
     message.channel.send('say "$help focus <command>" to get info on a command. \n the commands are:')
     setTimeout(function(){
       async function RunCycle(){
-    for (i = 0; i < bot.AvalibleCommands.length; i++) {
+    for (const i = 0; i < bot.AvalibleCommands.length; i++) {
      //bot.commands.get(bot.AvalibleCommands[i])
      async function Await(){
       await message.channel.send(bot.AvalibleCommands[i])
@@ -21,7 +21,7 @@ module.exports = {
     }, 500)
     } else if (split[1] == "focus" && split[2]){
       if (bot.AvalibleCommands.includes(split[2])){
-       if (!bot.commands.has(Split[2])) {
+       if (!bot.commands.has(split[2])) {
          console.log("c")
       const Uri = `spiderlord202/commandDir/${split[2]}.js`
       const Options = {}
@@ -46,7 +46,7 @@ module.exports = {
         })
       } else {
         console.log("b")
-        message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${bot.commands.get(Split[0].slice(1)).FileName}`)
+        message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${bot.commands.get(split[0].slice(1)).FileName}`)
       }
       }
     }
