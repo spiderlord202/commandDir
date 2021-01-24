@@ -46,7 +46,7 @@ module.exports = {
         }
         })
       } else {
-        message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${bot.commands.get(split[2]).FileName}`)
+        message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${bot.commands.get(split[2]).slice(0, -3)}`)
       }
       }
     }
