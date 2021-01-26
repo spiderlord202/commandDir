@@ -27,7 +27,8 @@ module.exports = {
      "hi",
      "how old are you?",
      "i was not talking to you",
-     "is this a chatbot?"
+     "is this a chatbot?",
+     "haha"
   ];
    const Responce = [
     "E",
@@ -41,7 +42,8 @@ module.exports = {
     "hi welcome to chillys",
     "i am ** years old",
     ";(",
-    "Yes. I have been enabled to respond to messages without my prefix by my bot developer or this channel has BOT (in all caps) in the topic. I have a limmited number of reponces and I DO NOT learn from what you say."
+    "Yes. I have been enabled to respond to messages without my prefix by my bot developer or this channel has BOT (in all caps) in the topic. I have a limmited number of reponces and I DO NOT learn from what you say.",
+     "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA HA HA HA"
   ];
     async function CycleResponces(message){
      for (const i in Responces) {
