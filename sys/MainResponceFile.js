@@ -12,7 +12,8 @@ module.exports = {
   name: "ReponceFile",
   description:
     "Sends a reponce to a non command message said in a certain channel or does things limmited to certain servers",
-  execute: async message => { 
+  execute: async (message, DB) => { 
+    console.log(message.content)
     const Pcall = new Set();
     //for stuff limmited to certain servers and the chatbot aspect
    const Responces = [
