@@ -22,7 +22,15 @@ module.exports = {
        if (!bot.commands.has(split[2])) {
       const Uri = `spiderlord202/commandDir/${split[2]}.js`
       const Options = {}
-      const url = bot.GetURL(Uri, Options);
+      let url = ""
+      async function UrlFunction(){
+       await Bot.GetURL(Uri, Options).then(data => {
+         url = data
+       }).catch(err => {
+         console.log(err)
+       })
+     }
+      UrlFunction().then(() => {
         got(url)
     .then(response => {
           let res = JSON.parse(response.body)
@@ -45,6 +53,7 @@ module.exports = {
         }).then(() => {console.log("finished")})
         }
         })
+      })
       } else {
         message.channel.send(`This feture is unavailible. Soon This command will provide you info on ${bot.commands.get(split[2]).FileName.slice(0, -3)}`)
       }
