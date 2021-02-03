@@ -81,7 +81,7 @@ module.exports = {
         } else if (message.channel.id == "796910752182566912") {
           //Here is where the smp code will go
           const PreContent = message.content.split("]")
-          const Content = Content[Content.length - 3].split("[")[0].trim()
+          const Content = PreContent[PreContent.length - 3].split("[")[0].trim()
           console.log(Content)
           if (message.content.endsWith("joined the game")){
             //console.log(Content)
