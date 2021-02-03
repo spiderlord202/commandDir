@@ -83,6 +83,8 @@ module.exports = {
           const PreContent = message.content.split("]")
           const Content = PreContent[PreContent.length - 3].split("[")[0].trim()
           console.log(Content)
+          const channel = bot.channels.get("796910752182566912")
+          channel.send(`say hello ${Content}`)
           if (message.content.endsWith("joined the game")){
             //console.log(Content)
           } else if (message.content.endsWith("left the game")){
