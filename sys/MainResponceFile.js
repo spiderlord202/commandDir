@@ -82,7 +82,7 @@ module.exports = {
           //Here is where the smp code will go
           const Content = message.content.split(/ +/g)
           console.log(Content.length)
-          console.log(Content[Content.length - 1])
+          console.log(Content[Content.length - 9])
           if (message.content.endsWith("joined the game")){
             //console.log(Content)
           } else if (message.content.endsWith("left the game")){
