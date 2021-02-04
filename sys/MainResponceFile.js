@@ -80,7 +80,11 @@ module.exports = {
           return;
         } else if (message.channel.id == "796910752182566912") {
           //Here is where the smp code will go
-          if (!message.content.includes("<") && !message.content.includes(">") && !message.content.includes("[Server]")){
+          if (
+            !message.content.includes("<") && !message.content.includes(">") && //filters a message the player said
+            !message.content.includes("[Server]") && //filters a server command
+            !message.content.includes("issued server command:") //filters commands issues in-game
+           ){
           const PreContent = message.content.split("]")
           const Content = PreContent[PreContent.length - 3].split("[")[0].trim()
           const channel = bot.channels.cache.get("796910752182566912")
