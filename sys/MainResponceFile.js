@@ -31,7 +31,8 @@ module.exports = {
      "is this a chatbot?",
      "haha",
      "aw",
-     "fuck u"
+     "fuck u",
+     "oof"
   ];
    const Responce = [
     "E",
@@ -49,6 +50,7 @@ module.exports = {
      "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA HA HA HA",
      "https://tenor.com/view/bbmdp-cute-cat-kitty-tabby-cat-gif-6125888",
      "how bout fuck u"
+      "https://tenor.com/view/oof-simpsons-gif-14031953"
   ];
     async function CycleResponces(message){
      for (const i in Responces) {
