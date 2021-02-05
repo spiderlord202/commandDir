@@ -78,7 +78,7 @@ module.exports = {
         if (message.channel.id == "720519073712046081") {
           // RollCall()
           return;
-        } else if (message.channel.id == "796910752182566912") {
+        } else if (message.channel.id == "796910752182566912" && message.author.id == "796911022370848768") {
           //Here is where the smp code will go
           if (
             !message.content.includes("<") && !message.content.includes(">") && //filters a message the player said
