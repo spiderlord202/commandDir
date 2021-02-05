@@ -49,7 +49,7 @@ module.exports = {
     "Yes. I have been enabled to respond to messages without my prefix by my bot developer or this channel has BOT (in all caps) in the topic. I have a limmited number of reponces and I DO NOT learn from what you say.",
      "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA HA HA HA",
      "https://tenor.com/view/bbmdp-cute-cat-kitty-tabby-cat-gif-6125888",
-     "how bout fuck u"
+     "how bout fuck u",
       "https://tenor.com/view/oof-simpsons-gif-14031953"
   ];
     async function CycleResponces(message){
