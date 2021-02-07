@@ -3,7 +3,7 @@ module.exports = {
   name: "help",
   description: "help",
   execute: async (bot, message, args, split) => {
-    if (!split[1]){
+    if (split[1] && split[1] == "commands"){
     message.channel.send('say "$help focus <command>" to get info on a command. \n the commands are:')
     setTimeout(function(){
       async function RunCycle(){
@@ -17,7 +17,7 @@ module.exports = {
       }
       RunCycle().then(() => {message.channel.send("thats all!")})
     }, 500)
-    } else if (split[1] === "focus" && split[2]){
+    } else if (split[1] && split[2] && split[1] === "focus"){
       if (bot.AvalibleCommands.includes(split[2])){
        if (!bot.commands.has(split[2])) {
       const Uri = `spiderlord202/commandDir/${split[2]}.js`
