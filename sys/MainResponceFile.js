@@ -103,7 +103,8 @@ module.exports = {
       }
     });
     } else {
-      
+       const channel = bot.channels.cache.get("796910752182566912")
+       channel.send(`setblock 97 16 65 minecraft:lava`)
    }
   }
 };
