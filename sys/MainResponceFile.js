@@ -13,7 +13,7 @@ module.exports = {
   description:
     "Sends a reponce to a non command message said in a certain channel or does things limmited to certain servers",
   execute: async (message, bot, DB) => { 
-    if (message){
+    if (message != null){
     const Pcall = new Set();
     //for stuff limmited to certain servers and the chatbot aspect
    const Responces = [
@@ -88,6 +88,7 @@ module.exports = {
             !message.content.includes("[Server]") && //filters a server command
             !message.content.includes("issued server command:") //filters commands issues in-game
            ){
+          if (message.content === null || message.content === undefined) return console.log("a");
           const PreContent = message.content.split("]")
           const Content = PreContent[PreContent.length - 3].split("[")[0].trim()
           if (Content === null) return;
