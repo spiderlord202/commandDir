@@ -69,9 +69,15 @@ module.exports = {
       } else if (Ids.some(condition)) {
        CycleResponces(message)
       }
-      } else if (Ids.some(condition)) {
-        CycleResponces(message)
+      } else if (message.author.id == ""){
+        if (message.content == "C=> MC toggle"){
+        if (DB.Storage.MCEnabled == true){
+         DB.Storage.MCEnabled = true
+       } else {
+         DB.Storage.MCEnabled = true
+       }
       }
+     }
     }
     LoopBackArray().then(() => {
       if (Pcall.has(message.author.id)) {
@@ -106,8 +112,10 @@ module.exports = {
       }
     });
     } else {
+       if (DB.Storage.MCEnabled){
        const channel = bot.channels.cache.get("796910752182566912")
        channel.send(`setblock 97 16 65 minecraft:lava`)
+     }
    }
   }
 };
