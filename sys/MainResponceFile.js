@@ -88,8 +88,9 @@ module.exports = {
             !message.content.includes("[Server]") && //filters a server command
             !message.content.includes("issued server command:") //filters commands issues in-game
            ){
-          if (message.content === null || message.content === undefined) return console.log("a");
+          //if (message.content === null || message.content === undefined) return;
           const PreContent = message.content.split("]")
+          if (PreContent === null || PreContent === undefined) return;
           const Content = PreContent[PreContent.length - 3].split("[")[0].trim()
           if (Content === null) return;
           const channel = bot.channels.cache.get("796910752182566912")
