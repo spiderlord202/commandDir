@@ -76,6 +76,7 @@ module.exports = {
        } else {
          DB.Storage.MCEnabled = true
        }
+       message.channel.send(`MC pinging has been set to ${MCEnabled}`)
       }
      }
     }
@@ -115,6 +116,8 @@ module.exports = {
        if (DB.Storage.MCEnabled){
        const channel = bot.channels.cache.get("796910752182566912")
        channel.send(`setblock 97 16 65 minecraft:lava`)
+     } else {
+       
      }
    }
   }
