@@ -71,8 +71,9 @@ module.exports = {
       }
       } else if (message.author.id == "609490386238308352"){
         if (message.content == "C=> MC toggle"){
+          console.log("a")
         if (DB.Storage.MCEnabled == true){
-         DB.Storage.MCEnabled = true
+         DB.Storage.MCEnabled = false
        } else {
          DB.Storage.MCEnabled = true
        }
