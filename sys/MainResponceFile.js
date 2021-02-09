@@ -76,7 +76,7 @@ module.exports = {
        } else {
          DB.Storage.MCEnabled = true
        }
-       message.channel.send(`MC pinging has been set to ${MCEnabled}`)
+       message.channel.send(`MC pinging has been set to ${DB.Storage.MCEnabled}`)
       }
      }
     }
