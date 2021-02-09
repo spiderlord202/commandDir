@@ -13,7 +13,6 @@ module.exports = {
   description:
     "Sends a reponce to a non command message said in a certain channel or does things limmited to certain servers",
   execute: async (message, bot, DB) => { 
-    console.log(message.content)
     if (message != null){
     const Pcall = new Set();
     //for stuff limmited to certain servers and the chatbot aspect
@@ -86,6 +85,7 @@ module.exports = {
       if (Pcall.has(message.author.id)) {
         return Pcall.delete(message.author.id);
       } else {
+        console.log("l")
         Pcall.delete(message.author.id);
         if (message.channel.id == "720519073712046081") {
           // RollCall()
