@@ -13,6 +13,7 @@ module.exports = {
   description:
     "Sends a reponce to a non command message said in a certain channel or does things limmited to certain servers",
   execute: async (message, bot, DB) => { 
+    console.log(message.content)
     if (message != null){
     const Pcall = new Set();
     //for stuff limmited to certain servers and the chatbot aspect
