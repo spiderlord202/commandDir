@@ -69,7 +69,7 @@ module.exports = {
       } else if (Ids.some(condition)) {
        CycleResponces(message)
       }
-      } else if (message.author.id == ""){
+      } else if (message.author.id == "609490386238308352"){
         if (message.content == "C=> MC toggle"){
         if (DB.Storage.MCEnabled == true){
          DB.Storage.MCEnabled = true
