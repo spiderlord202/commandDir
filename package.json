@@ -5,7 +5,7 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node sys/server.js"
+    "start": "node ./sys/server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
